@@ -2,6 +2,77 @@
 #include <string.h>
 #include <stdlib.h>
 
+/*#define MAX 110
+
+char yigin[MAX][MAX];
+int top = -1;
+
+int push(char x[]) {
+    if (top >= MAX - 1) {
+        return 0;
+    }
+    top++;
+    int i = 0;
+    while (x[i]) {
+        yigin[top][i] = x[i];
+        i++;
+    }
+    yigin[top][i] = 0;
+}
+
+char* pop() {
+    if (top < 0) return NULL;
+    return yigin[top--];
+}
+
+int main() {
+    char s[500];
+    scanf("%[^\n]", s);
+
+    int i = 0;
+    while (s[i]) {
+        if (s[i] == '<') {
+            i++;
+            char y[50];
+            int j = 0;
+            while (s[i] && s[i] != '>') {
+                y[j] = s[i];
+                i++;
+                j++;
+            }
+            y[j] = 0;
+            if (y[0] != '/') {
+                push(y);
+            } else {
+                char* tag = pop();
+                int uyumKontrol = 1;
+                int a = 0;
+                int b = 1;
+                while (tag && tag[a] && y[b]) {
+                    if (tag[a] != y[b]) uyumKontrol = 0;
+                    a++;
+                    b++;
+                }
+                if (!tag || tag[a] != 0 || y[b] != 0) {
+                    uyumKontrol = 0;
+                }
+                if (!uyumKontrol) {
+                    printf("error <%s>\n", tag);
+                    return 0;
+                }
+            }
+        }
+        i++;
+    }
+
+    if (top == -1) {
+        printf("correct");
+    } else {
+        printf("error <%s>\n", yigin[top]);
+    }
+    return 0;
+}*/
+
 /*struct stackNode {
     int data;
     struct stackNode* next;
