@@ -91,7 +91,6 @@ struct node* deleteLast(struct node* head){
         temp2=temp;
         temp=temp->next;
     }
-    // sondan bir öncekini son düğüm yapıp son düğümü(temp) listeden koparıyoruz
     temp2->next=NULL;
     free(temp);
     temp=NULL;
